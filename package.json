@@ -1,0 +1,33 @@
+{
+	"name": "eslint-config-jonhaddow",
+	"version": "1.0.0",
+	"description": "ESLint configuration for use across projects",
+	"main": "index.js",
+	"author": "Jon Haddow <haddowjon@protonmail.com>",
+	"license": "MIT",
+	"private": false,
+	"dependencies": {
+		"@typescript-eslint/eslint-plugin": "^3.2.0",
+		"@typescript-eslint/parser": "^3.2.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-import-resolver-webpack": "^0.12.1",
+		"eslint-plugin-import": "^2.21.1",
+		"eslint-plugin-jest": "^23.13.2",
+		"eslint-plugin-jest-dom": "^2.1.0",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-prettier": "^3.1.3",
+		"eslint-plugin-react": "^7.20.0",
+		"eslint-plugin-react-hooks": "^4.0.4",
+		"eslint-plugin-testing-library": "^3.2.0",
+		"webpack": "^4.43.0"
+	},
+	"peerDependencies": {
+		"eslint": ">= 6"
+	},
+	"devDependencies": {
+		"eslint": "^7.2.0",
+		"husky": "^4.2.5",
+		"lint-staged": "^10.2.9",
+		"prettier": "2.0.5"
+	}
+}
