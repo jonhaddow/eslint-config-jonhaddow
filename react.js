@@ -24,9 +24,9 @@ module.exports = {
 		"jsx-a11y",
 		"react",
 		"react-hooks",
-		"plugin:testing-library/react",
-		"plugin:jest/recommended",
-		"plugin:jest-dom/recommended",
+		"testing-library",
+		"jest",
+		"jest-dom",
 	],
 	rules: {
 		// Hook specific rules
