@@ -9,5 +9,4 @@ module.exports = {
 		// Prettier config to disable stylistic rules
 		"prettier",
 	],
-	plugins: ["prettier"],
 };
