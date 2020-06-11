@@ -2,10 +2,29 @@
 	"name": "eslint-config-jonhaddow",
 	"version": "1.0.0",
 	"description": "ESLint configuration for use across projects",
-	"main": "index.js",
-	"author": "Jon Haddow <haddowjon@protonmail.com>",
+	"author": "Jon Haddow <haddowjon@protonmail.com> (https://jon.haddow.me)",
 	"license": "MIT",
 	"private": false,
+	"keywords": [
+		"eslint",
+		"eslint-config",
+		"lint",
+		"config"
+	],
+	"main": "index.js",
+	"files": [
+		"react.js",
+		"typescript.js"
+	],
+	"homepage": "https://github.com/jonhaddow/eslint-config-jonhaddow",
+	"bugs": {
+		"email": "haddowjon@protonmail.com",
+		"url": "https://github.com/jonhaddow/eslint-config-jonhaddow/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jonhaddow/eslint-config-jonhaddow.git"
+	},
 	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "^3.2.0",
 		"@typescript-eslint/parser": "^3.2.0",
@@ -15,8 +34,7 @@
 		"eslint-plugin-jsx-a11y": "^6.2.3",
 		"eslint-plugin-react": "^7.20.0",
 		"eslint-plugin-react-hooks": "^4.0.4",
-		"eslint-plugin-testing-library": "^3.2.0",
-		"webpack": "^4.43.0"
+		"eslint-plugin-testing-library": "^3.2.0"
 	},
 	"peerDependencies": {
 		"eslint": ">= 6"
