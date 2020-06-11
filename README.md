@@ -10,7 +10,7 @@ npm install --save-dev eslint-config-jonhaddow
 
 ## Usage
 
-Then add the extends to your `.eslintrc.js`:
+Add the `extends` property to your `.eslintrc.js`:
 
 ```javascript
 module.exports = {
@@ -18,7 +18,7 @@ module.exports = {
 }
 ```
 
-Additional configurations can be added to the `extends` array, dependent on the project:
+Additional configurations can be added to the `extends` array (in additional to the base), dependent on the project:
 
 - For React projects (with Jest tests): `jonhaddow/react`
 - For TypeScript projects: `jonhaddow/typescript`
