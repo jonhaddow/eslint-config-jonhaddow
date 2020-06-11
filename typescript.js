@@ -32,8 +32,6 @@ module.exports = {
 		// type parameter provided in TypeScript
 		"react/prop-types": "off",
 
-		"@typescript-eslint/no-empty-function": "off",
-
 		// Prevent warnings for functions defined at the bottom of a file.
 		"@typescript-eslint/no-use-before-define": [
 			"warn",
