@@ -6,11 +6,6 @@ module.exports = {
 		// Recommended accessibility rules for JSX
 		"plugin:jsx-a11y/recommended",
 
-		// Best practices for testing with Jest and Testing Library
-		"plugin:testing-library/react",
-		"plugin:jest/recommended",
-		"plugin:jest-dom/recommended",
-
 		// Prettier config to disable stylistic rules
 		"prettier/react",
 	],
@@ -20,14 +15,7 @@ module.exports = {
 		},
 		sourceType: "module",
 	},
-	plugins: [
-		"jsx-a11y",
-		"react",
-		"react-hooks",
-		"testing-library",
-		"jest",
-		"jest-dom",
-	],
+	plugins: ["jsx-a11y", "react", "react-hooks"],
 	rules: {
 		// Hook specific rules
 		"react-hooks/rules-of-hooks": "error",
