@@ -20,5 +20,5 @@ module.exports = {
 
 Additional configurations can be added to the `extends` array (in additional to the base), dependent on the project:
 
-- For React projects (with Jest tests): `jonhaddow/react`
+- For React projects: `jonhaddow/react`
 - For TypeScript projects: `jonhaddow/typescript`

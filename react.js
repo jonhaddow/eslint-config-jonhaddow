@@ -20,6 +20,10 @@ module.exports = {
 		// Hook specific rules
 		"react-hooks/rules-of-hooks": "error",
 		"react-hooks/exhaustive-deps": "warn",
+
+		// Disabling rule as prop type can be inferred from the
+		// type parameter provided in TypeScript
+		"react/prop-types": "off",
 	},
 	settings: {
 		react: {
