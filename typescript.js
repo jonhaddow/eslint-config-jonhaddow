@@ -3,9 +3,6 @@ module.exports = {
 		// TypeScript specific recommended rules
 		"plugin:@typescript-eslint/recommended",
 		"plugin:@typescript-eslint/recommended-requiring-type-checking",
-
-		// Prettier config to disable stylistic rules
-		"prettier/@typescript-eslint",
 	],
 	parser: "@typescript-eslint/parser",
 	parserOptions: {

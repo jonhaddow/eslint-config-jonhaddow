@@ -5,9 +5,6 @@ module.exports = {
 
 		// Recommended accessibility rules for JSX
 		"plugin:jsx-a11y/recommended",
-
-		// Prettier config to disable stylistic rules
-		"prettier/react",
 	],
 	parserOptions: {
 		ecmaFeatures: {
