@@ -14,11 +14,10 @@ Add the `extends` property to your `.eslintrc.js`:
 
 ```javascript
 module.exports = {
-  extends: ['jonhaddow']
-}
+	extends: ["jonhaddow"],
+};
 ```
 
 Additional configurations can be added to the `extends` array (in additional to the base), dependent on the project:
 
 - For React projects: `jonhaddow/react`
-- For TypeScript projects: `jonhaddow/typescript`
