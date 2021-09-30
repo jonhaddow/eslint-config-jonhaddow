@@ -47,6 +47,9 @@
 		"*.js": "eslint --fix",
 		"*.{json,js,md}": "prettier --write"
 	},
+	"prettier": {
+		"useTabs": true
+	},
 	"scripts": {
 		"prepare": "husky install"
 	}
