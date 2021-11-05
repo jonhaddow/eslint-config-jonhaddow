@@ -13,6 +13,15 @@ module.exports = {
 	parserOptions: {
 		sourceType: "module",
 	},
+	rules: {
+		"sort-imports": [
+			"warn",
+			{
+				ignoreDeclarationSort: true,
+				ignoreMemberSort: false,
+			},
+		],
+	},
 	overrides: [
 		{
 			// Configuration for typescript files only
