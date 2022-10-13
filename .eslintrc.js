@@ -1,6 +1,6 @@
 module.exports = {
-	env: {
-		node: true,
-	},
-	extends: ["./index.js"],
+  env: {
+    node: true,
+  },
+  extends: ["./index.js"],
 };

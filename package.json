@@ -1,56 +1,43 @@
 {
-	"name": "eslint-config-jonhaddow",
-	"version": "3.2.0",
-	"description": "ESLint configuration for use across projects",
-	"author": "Jon Haddow <haddowjon@protonmail.com> (https://jon.haddow.me)",
-	"license": "MIT",
-	"private": false,
-	"keywords": [
-		"eslint",
-		"eslint-config",
-		"lint",
-		"config"
-	],
-	"main": "index.js",
-	"files": [
-		"react.js",
-		"typescript.js"
-	],
-	"homepage": "https://github.com/jonhaddow/eslint-config-jonhaddow",
-	"bugs": {
-		"email": "haddowjon@protonmail.com",
-		"url": "https://github.com/jonhaddow/eslint-config-jonhaddow/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/jonhaddow/eslint-config-jonhaddow.git"
-	},
-	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^4.32.0",
-		"@typescript-eslint/parser": "^4.32.0",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-jsx-a11y": "^6.4.1",
-		"eslint-plugin-react": "^7.26.1",
-		"eslint-plugin-react-hooks": "^4.3.0"
-	},
-	"peerDependencies": {
-		"eslint": ">= 6"
-	},
-	"devDependencies": {
-		"eslint": "^7.32.0",
-		"husky": "^7.0.2",
-		"lint-staged": "^11.1.2",
-		"prettier": "^2.4.1",
-		"typescript": "^3.9.10"
-	},
-	"lint-staged": {
-		"*.js": "eslint --fix",
-		"*.{json,js,md}": "prettier --write"
-	},
-	"prettier": {
-		"useTabs": true
-	},
-	"scripts": {
-		"prepare": "husky install"
-	}
+  "name": "eslint-config-jonhaddow",
+  "version": "3.2.0",
+  "description": "ESLint configuration for use across projects",
+  "author": "Jon Haddow <jon@haddow.me> (https://jon.haddow.me)",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "lint",
+    "config"
+  ],
+  "main": "index.js",
+  "files": [
+    "react.js"
+  ],
+  "homepage": "https://github.com/jonhaddow/eslint-config-jonhaddow",
+  "bugs": {
+    "email": "jon@haddow.me",
+    "url": "https://github.com/jonhaddow/eslint-config-jonhaddow/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonhaddow/eslint-config-jonhaddow.git"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.9",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "peerDependencies": {
+    "eslint": ">= 8"
+  },
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4"
+  }
 }
