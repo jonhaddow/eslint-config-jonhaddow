@@ -14,7 +14,7 @@ Add the `extends` property to your `.eslintrc.js`:
 
 ```javascript
 module.exports = {
-	extends: ["jonhaddow"],
+  extends: ["jonhaddow"],
 };
 ```
 
