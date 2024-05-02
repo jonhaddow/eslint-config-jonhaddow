@@ -10,17 +10,24 @@ npm install --save-dev eslint-config-jonhaddow
 
 ## Usage
 
-Add the `extends` property to your `.eslintrc.js`:
+Add the `extends` property to your `eslint.config.js`:
 
 ```javascript
+const config = require('eslint-config-jonhaddow')
+
 module.exports = {
-  extends: ["jonhaddow"],
+  ...config.base,
+  ...config.react, // This can be omitted if you're not using React
+  { 
+    languageOptions: {
+      parserOptions: {
+        project: true,
+        tsconfigRootDir: __dirname,
+      },
+    },
+  }
 };
 ```
-
-Additional configurations can be added to the `extends` array (in additional to the base), dependent on the project:
-
-- For React projects: `jonhaddow/react`
 
 ## Publishing
 
