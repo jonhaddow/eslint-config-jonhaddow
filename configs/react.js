@@ -1,14 +1,12 @@
 const tseslint = require("typescript-eslint");
 const globals = require("globals");
-const { FlatCompat } = require("@eslint/eslintrc");
 const hooksPlugin = require("eslint-plugin-react-hooks");
 const reactJSXRuntime = require("eslint-plugin-react/configs/jsx-runtime.js");
 const reactRecommended = require("eslint-plugin-react/configs/recommended.js");
-
-const compat = new FlatCompat({ resolvePluginsRelativeTo: __dirname });
+const jsxA11y = require("eslint-plugin-jsx-a11y");
 
 module.exports = tseslint.config(
-  ...compat.extends("plugin:jsx-a11y/recommended"),
+  jsxA11y.flatConfigs.recommended,
 
   {
     // Entry for 'all files' (that we care about)
@@ -49,5 +47,5 @@ module.exports = tseslint.config(
         version: "detect",
       },
     },
-  }
+  },
 );
