@@ -31,7 +31,7 @@
     "eslint-plugin-react": "^7.31.9",
     "eslint-plugin-react-hooks": "^4.6.0",
     "globals": "^15.1.0",
-    "typescript-eslint": "^7.8.0"
+    "typescript-eslint": "^8.3.0"
   },
   "peerDependencies": {
     "eslint": ">= 8"
