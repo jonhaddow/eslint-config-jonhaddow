@@ -1,53 +1,45 @@
 const tseslint = require("typescript-eslint");
 const globals = require("globals");
-const { FlatCompat } = require("@eslint/eslintrc");
+const reactPlugin = require("eslint-plugin-react");
 const hooksPlugin = require("eslint-plugin-react-hooks");
-const reactJSXRuntime = require("eslint-plugin-react/configs/jsx-runtime.js");
-const reactRecommended = require("eslint-plugin-react/configs/recommended.js");
+const jsxA11y = require("eslint-plugin-jsx-a11y");
 
-const compat = new FlatCompat({ resolvePluginsRelativeTo: __dirname });
+module.exports = tseslint.config({
+  // Entry for 'all files' (that we care about)
+  files: ["**/*.{js,jsx,ts,tsx}"],
 
-module.exports = tseslint.config(
-  ...compat.extends("plugin:jsx-a11y/recommended"),
+  // React plugin
+  ...reactPlugin.configs.flat.all,
 
-  {
-    // Entry for 'all files' (that we care about)
-    files: ["**/*.{js,jsx,ts,tsx}"],
+  // React hooks plugin
+  ...hooksPlugin.configs.recommended,
 
-    extends: [
-      // eslint-plugin-react recommended rules
-      reactRecommended,
-      reactJSXRuntime,
-    ],
+  // JSX a11y plugin
+  ...jsxA11y.flatConfigs.recommended,
 
-    plugins: {
-      // eslint-plugin-react-hooks plugin
-      "react-hooks": hooksPlugin,
-    },
+  rules: {
+    // Disabling rule as prop type can be inferred from the
+    // type parameter provided in TypeScript
+    "react/prop-types": "off",
+  },
 
-    rules: {
-      ...hooksPlugin.configs.recommended.rules,
+  languageOptions: {
+    ...reactPlugin.configs.flat.all.languageOptions,
+    ...jsxA11y.flatConfigs.recommended.languageOptions,
 
-      // Disabling rule as prop type can be inferred from the
-      // type parameter provided in TypeScript
-      "react/prop-types": "off",
-    },
-
-    languageOptions: {
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      globals: {
-        ...globals.browser,
+    parserOptions: {
+      ecmaFeatures: {
+        jsx: true,
       },
     },
-
-    settings: {
-      react: {
-        version: "detect",
-      },
+    globals: {
+      ...globals.browser,
     },
-  }
-);
+  },
+
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
+});
