@@ -9,7 +9,7 @@ module.exports = tseslint.config({
   files: ["**/*.{js,jsx,ts,tsx}"],
 
   // React plugin
-  ...reactPlugin.configs.flat.all,
+  ...reactPlugin.configs.all,
 
   // React hooks plugin
   ...hooksPlugin.configs.recommended,
@@ -24,7 +24,7 @@ module.exports = tseslint.config({
   },
 
   languageOptions: {
-    ...reactPlugin.configs.flat.all.languageOptions,
+    ...reactPlugin.configs.all.languageOptions,
     ...jsxA11y.flatConfigs.recommended.languageOptions,
 
     parserOptions: {
