@@ -1,7 +1,4 @@
-const base = require("./configs/base");
-const react = require("./configs/react");
+import base from "./configs/base.js";
+import react from "./configs/react.js";
 
-module.exports = {
-  base,
-  react,
-};
+export { base, react };
