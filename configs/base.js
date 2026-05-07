@@ -1,8 +1,8 @@
-const eslint = require("@eslint/js");
-const tseslint = require("typescript-eslint");
-const eslintConfigPrettier = require("eslint-config-prettier");
+import eslint from "@eslint/js";
+import tseslint from "typescript-eslint";
+import eslintConfigPrettier from "eslint-config-prettier";
 
-module.exports = tseslint.config(
+export default tseslint.config(
   {
     // Entry for 'all files'
     files: ["**/*.{js,jsx,ts,tsx}"],
@@ -66,5 +66,5 @@ module.exports = tseslint.config(
   },
 
   // Disable stylistic rules conflicting with Prettier
-  eslintConfigPrettier
+  eslintConfigPrettier,
 );
