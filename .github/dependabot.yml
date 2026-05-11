@@ -1,13 +1,15 @@
 version: 2
+
 updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "monthly"
+    cooldown:
+      default-days: 3
     open-pull-requests-limit: 10
     groups:
       all-dependencies:
-        dependency-type: "production"
         update-types:
           - "patch"
           - "minor"
