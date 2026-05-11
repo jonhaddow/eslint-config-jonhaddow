@@ -1,21 +1,29 @@
-# This workflow will run tests using node and then publish a package to npm when a release is created
-# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
-
-name: Publish to npm
+name: Release and publish to npm
 
 on:
-  release:
-    types: [published]
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: Version bump type
+        required: true
+        default: patch
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
 
 permissions:
-  id-token: write # Required for OIDC
-  contents: read
+  id-token: write # Required for OIDC trusted publishing
+  contents: write # Required to push version bump commit + tag
 
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-node@v6
         with:
           node-version: 24
@@ -23,4 +31,16 @@ jobs:
           package-manager-cache: false # never use caching in release builds
       - run: npm ci
       - run: npx eslint .
+      - name: Bump version
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          npm version ${{ github.event.inputs.bump }} -m "chore: release %s"
+          git push --follow-tags
       - run: npm publish
+      - name: Create GitHub release
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          gh release create "v$VERSION" --title "v$VERSION" --generate-notes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
