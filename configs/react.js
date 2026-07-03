@@ -1,3 +1,4 @@
+import { fixupConfigRules } from "@eslint/compat";
 import tseslint from "typescript-eslint";
 import reactPlugin from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -9,14 +10,14 @@ export default tseslint.config({
 
   extends: [
     // React plugin
-    reactPlugin.configs.flat.recommended,
-    reactPlugin.configs.flat["jsx-runtime"],
+    ...fixupConfigRules(reactPlugin.configs.flat.recommended),
+    ...fixupConfigRules(reactPlugin.configs.flat["jsx-runtime"]),
 
     // React hooks plugin
     reactHooks.configs.flat["recommended-latest"],
 
     // JSX a11y plugin
-    jsxA11y.flatConfigs.strict,
+    ...fixupConfigRules(jsxA11y.flatConfigs.strict),
   ],
 
   rules: {

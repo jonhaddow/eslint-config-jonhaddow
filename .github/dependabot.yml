@@ -8,15 +8,6 @@ updates:
     cooldown:
       default-days: 3
     open-pull-requests-limit: 10
-    ignore:
-      # Ignore all updates to eslint and @eslint/js until all plugins support it.
-      # See https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/issues/1075
-      - dependency-name: "@eslint/js"
-        update-types:
-          - version-update:semver-major
-      - dependency-name: "eslint"
-        update-types:
-          - version-update:semver-major
     groups:
       all-dependencies:
         update-types:
