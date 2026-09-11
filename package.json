@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-jonhaddow",
-  "version": "7.1.1",
+  "version": "7.1.2",
   "description": "ESLint configuration for use across projects",
   "author": "Jon Haddow <jon@haddow.me> (https://jon.haddow.me)",
   "license": "MIT",
