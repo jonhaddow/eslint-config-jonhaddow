@@ -1,0 +1,17 @@
+name: PR build
+on: pull_request
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: Install dependencies
+        run: npm ci
+      - name: ESLint (config lints itself)
+        run: npx eslint .
+      - name: Package contents
+        run: npm pack --dry-run
