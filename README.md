@@ -1,5 +1,7 @@
 # eslint-config-jonhaddow
 
+> **Archived.** No longer maintained: each project now keeps a short ESLint config of its own (see `eslint.config.js` in jonhaddow/plants for the type-aware rules worth copying).
+
 :heavy_check_mark: - ESLint configuration for use across my projects
 
 ## Install
